@@ -1,2 +1,2 @@
-light_robot
+robotis
 -DCATKIN_DEVEL_PREFIX=/home/mahmoud/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mahmoud/catkin_ws/install -G Unix Makefiles

@@ -284,6 +284,9 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
@@ -360,17 +363,20 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libxmlrpcpp.so
 
-//Value Computed by CMake
-light_robot_BINARY_DIR:STATIC=/home/mahmoud/catkin_ws/build/light_robot
-
-//Value Computed by CMake
-light_robot_SOURCE_DIR:STATIC=/home/mahmoud/catkin_ws/src/light_robot
-
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
+//The directory containing a CMake configuration file for message_genration.
+message_genration_DIR:PATH=message_genration_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//Value Computed by CMake
+robotis_BINARY_DIR:STATIC=/home/mahmoud/catkin_ws/build/robotis
+
+//Value Computed by CMake
+robotis_SOURCE_DIR:STATIC=/home/mahmoud/catkin_ws/src/robotis
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
