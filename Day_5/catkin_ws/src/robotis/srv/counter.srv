@@ -1,5 +1,5 @@
-string x
+string mystring
 
 ---
 
-int32 y
+int32 count

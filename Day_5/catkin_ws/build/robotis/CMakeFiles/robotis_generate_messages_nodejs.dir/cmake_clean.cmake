@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robotis_generate_messages_nodejs"
+  "/home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg/mahmoud.js"
   "/home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv/counter.js"
 )
 

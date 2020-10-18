@@ -8,13 +8,13 @@ import struct
 
 
 class counterRequest(genpy.Message):
-  _md5sum = "5e90a477f371ee690ac763e15f14f34b"
+  _md5sum = "e8054fff057e825e73968032a7c26bc8"
   _type = "robotis/counterRequest"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """string x
+  _full_text = """string mystring
 
 """
-  __slots__ = ['x']
+  __slots__ = ['mystring']
   _slot_types = ['string']
 
   def __init__(self, *args, **kwds):
@@ -25,7 +25,7 @@ class counterRequest(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x
+       mystring
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -34,10 +34,10 @@ class counterRequest(genpy.Message):
     if args or kwds:
       super(counterRequest, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.x is None:
-        self.x = ''
+      if self.mystring is None:
+        self.mystring = ''
     else:
-      self.x = ''
+      self.mystring = ''
 
   def _get_types(self):
     """
@@ -51,7 +51,7 @@ class counterRequest(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.x
+      _x = self.mystring
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -74,9 +74,9 @@ class counterRequest(genpy.Message):
       start = end
       end += length
       if python3:
-        self.x = str[start:end].decode('utf-8', 'rosmsg')
+        self.mystring = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.x = str[start:end]
+        self.mystring = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -89,7 +89,7 @@ class counterRequest(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.x
+      _x = self.mystring
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -113,9 +113,9 @@ class counterRequest(genpy.Message):
       start = end
       end += length
       if python3:
-        self.x = str[start:end].decode('utf-8', 'rosmsg')
+        self.mystring = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.x = str[start:end]
+        self.mystring = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -134,14 +134,14 @@ import struct
 
 
 class counterResponse(genpy.Message):
-  _md5sum = "48a1903b27e436ce72db71499e9e0169"
+  _md5sum = "602d642babe509c7c59f497c23e716a9"
   _type = "robotis/counterResponse"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """
-int32 y
+int32 count
 
 """
-  __slots__ = ['y']
+  __slots__ = ['count']
   _slot_types = ['int32']
 
   def __init__(self, *args, **kwds):
@@ -152,7 +152,7 @@ int32 y
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       y
+       count
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -161,10 +161,10 @@ int32 y
     if args or kwds:
       super(counterResponse, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.y is None:
-        self.y = 0
+      if self.count is None:
+        self.count = 0
     else:
-      self.y = 0
+      self.count = 0
 
   def _get_types(self):
     """
@@ -178,7 +178,7 @@ int32 y
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.y
+      _x = self.count
       buff.write(_get_struct_i().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -193,7 +193,7 @@ int32 y
       end = 0
       start = end
       end += 4
-      (self.y,) = _get_struct_i().unpack(str[start:end])
+      (self.count,) = _get_struct_i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -206,7 +206,7 @@ int32 y
     :param numpy: numpy python module
     """
     try:
-      _x = self.y
+      _x = self.count
       buff.write(_get_struct_i().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
@@ -222,7 +222,7 @@ int32 y
       end = 0
       start = end
       end += 4
-      (self.y,) = _get_struct_i().unpack(str[start:end])
+      (self.count,) = _get_struct_i().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -239,6 +239,6 @@ def _get_struct_i():
     return _struct_i
 class counter(object):
   _type          = 'robotis/counter'
-  _md5sum = '7a568b073f7ad956a756ca8771eb90bd'
+  _md5sum = 'b4834320f090e9235da913886638fb4e'
   _request_class  = counterRequest
   _response_class = counterResponse

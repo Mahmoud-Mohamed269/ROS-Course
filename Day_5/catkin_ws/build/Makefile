@@ -376,6 +376,19 @@ roscpp_generate_messages_py/fast:
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _robotis_generate_messages_check_deps_mahmoud
+
+# Build rule for target.
+_robotis_generate_messages_check_deps_mahmoud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _robotis_generate_messages_check_deps_mahmoud
+.PHONY : _robotis_generate_messages_check_deps_mahmoud
+
+# fast build rule for target.
+_robotis_generate_messages_check_deps_mahmoud/fast:
+	$(MAKE) -f robotis/CMakeFiles/_robotis_generate_messages_check_deps_mahmoud.dir/build.make robotis/CMakeFiles/_robotis_generate_messages_check_deps_mahmoud.dir/build
+.PHONY : _robotis_generate_messages_check_deps_mahmoud/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -664,6 +677,7 @@ help:
 	@echo "... robotis_generate_messages_cpp"
 	@echo "... robotis_geneus"
 	@echo "... roscpp_generate_messages_py"
+	@echo "... _robotis_generate_messages_check_deps_mahmoud"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... robotis_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"

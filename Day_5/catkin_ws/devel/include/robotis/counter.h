@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::robotis::counter > {
   static const char* value()
   {
-    return "7a568b073f7ad956a756ca8771eb90bd";
+    return "b4834320f090e9235da913886638fb4e";
   }
 
   static const char* value(const ::robotis::counter&) { return value(); }

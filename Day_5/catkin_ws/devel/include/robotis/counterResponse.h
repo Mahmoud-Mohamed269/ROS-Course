@@ -24,17 +24,17 @@ struct counterResponse_
   typedef counterResponse_<ContainerAllocator> Type;
 
   counterResponse_()
-    : y(0)  {
+    : count(0)  {
     }
   counterResponse_(const ContainerAllocator& _alloc)
-    : y(0)  {
+    : count(0)  {
   (void)_alloc;
     }
 
 
 
-   typedef int32_t _y_type;
-  _y_type y;
+   typedef int32_t _count_type;
+  _count_type count;
 
 
 
@@ -65,7 +65,7 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::robotis::counterResponse_<ContainerAllocator1> & lhs, const ::robotis::counterResponse_<ContainerAllocator2> & rhs)
 {
-  return lhs.y == rhs.y;
+  return lhs.count == rhs.count;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +122,12 @@ struct MD5Sum< ::robotis::counterResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "48a1903b27e436ce72db71499e9e0169";
+    return "602d642babe509c7c59f497c23e716a9";
   }
 
   static const char* value(const ::robotis::counterResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x48a1903b27e436ceULL;
-  static const uint64_t static_value2 = 0x72db71499e9e0169ULL;
+  static const uint64_t static_value1 = 0x602d642babe509c7ULL;
+  static const uint64_t static_value2 = 0xc59f497c23e716a9ULL;
 };
 
 template<class ContainerAllocator>
@@ -147,7 +147,7 @@ struct Definition< ::robotis::counterResponse_<ContainerAllocator> >
   static const char* value()
   {
     return "\n"
-"int32 y\n"
+"int32 count\n"
 "\n"
 ;
   }
@@ -167,7 +167,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.y);
+      stream.next(m.count);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -186,8 +186,8 @@ struct Printer< ::robotis::counterResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robotis::counterResponse_<ContainerAllocator>& v)
   {
-    s << indent << "y: ";
-    Printer<int32_t>::stream(s, indent + "  ", v.y);
+    s << indent << "count: ";
+    Printer<int32_t>::stream(s, indent + "  ", v.count);
   }
 };
 

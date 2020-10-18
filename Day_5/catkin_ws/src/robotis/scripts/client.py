@@ -1,24 +1,28 @@
 #!/usr/bin/env python
 
+
+import sys
 import rospy
 from robotis.srv import counter
 from robotis.srv import counterRequest
 from robotis.srv import counterResponse
 
-def number_words(s):
-    rospy.wait_for_service('word_counter')
+def count_words_client(mystring):
+    rospy.wait_for_service("count_words")
     try:
-         c = rospy.Serviceproxy('word_counter',counter)
-         no_of_words = 1
-         for ch in text:
-             if (ch == ' ' or ch == '\t' or ch == '\n'):
-             no_of_words = no_of_words + 1
-         print('Total number of words in String', no_of_words)
+        count_word = rospy.ServiceProxy("count_words", counter)
+        resp1 = count_word(mystring)
+        return resp1.count
 
-     except rospy.ROSINTERruptException, e:
-           print " Service call failled: %s"%e
-    
+    except rospy.ServiceException as e:
+        print ("service failed: %s"%e)
 
-if __name__ == "__main":
-     s = 'I love you\tYou are the best.'
-     number_words()
+def usage():
+    return "%s [Iput a string]"%sys.argv[0]
+
+
+if __name__ == "__main__":
+    while not rospy.is_shutdown():
+        mystring = raw_input ("Enter your sentence: ")
+        print("Requesting number of words in %s"%(mystring))
+        print("The number of words is %d"%(count_words_client(mystring)))

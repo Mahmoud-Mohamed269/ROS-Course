@@ -53,15 +53,22 @@ CMAKE_BINARY_DIR = /home/mahmoud/catkin_ws/build
 # Include the progress variables for this target.
 include robotis/CMakeFiles/robotis_generate_messages_nodejs.dir/progress.make
 
+robotis/CMakeFiles/robotis_generate_messages_nodejs: /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg/mahmoud.js
 robotis/CMakeFiles/robotis_generate_messages_nodejs: /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv/counter.js
 
 
+/home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg/mahmoud.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg/mahmoud.js: /home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from robotis/mahmoud.msg"
+	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg -Irobotis:/home/mahmoud/catkin_ws/src/robotis/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg
+
 /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv/counter.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv/counter.js: /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from robotis/counter.srv"
-	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from robotis/counter.srv"
+	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv -Irobotis:/home/mahmoud/catkin_ws/src/robotis/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv
 
 robotis_generate_messages_nodejs: robotis/CMakeFiles/robotis_generate_messages_nodejs
+robotis_generate_messages_nodejs: /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/msg/mahmoud.js
 robotis_generate_messages_nodejs: /home/mahmoud/catkin_ws/devel/share/gennodejs/ros/robotis/srv/counter.js
 robotis_generate_messages_nodejs: robotis/CMakeFiles/robotis_generate_messages_nodejs.dir/build.make
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robotis_generate_messages_cpp"
+  "/home/mahmoud/catkin_ws/devel/include/robotis/mahmoud.h"
   "/home/mahmoud/catkin_ws/devel/include/robotis/counter.h"
 )
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robotis_generate_messages_lisp"
+  "/home/mahmoud/catkin_ws/devel/share/common-lisp/ros/robotis/msg/mahmoud.lisp"
   "/home/mahmoud/catkin_ws/devel/share/common-lisp/ros/robotis/srv/counter.lisp"
 )
 

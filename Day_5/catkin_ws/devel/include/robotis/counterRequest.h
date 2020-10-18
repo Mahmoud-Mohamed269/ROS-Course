@@ -24,17 +24,17 @@ struct counterRequest_
   typedef counterRequest_<ContainerAllocator> Type;
 
   counterRequest_()
-    : x()  {
+    : mystring()  {
     }
   counterRequest_(const ContainerAllocator& _alloc)
-    : x(_alloc)  {
+    : mystring(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _x_type;
-  _x_type x;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _mystring_type;
+  _mystring_type mystring;
 
 
 
@@ -65,7 +65,7 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::robotis::counterRequest_<ContainerAllocator1> & lhs, const ::robotis::counterRequest_<ContainerAllocator2> & rhs)
 {
-  return lhs.x == rhs.x;
+  return lhs.mystring == rhs.mystring;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +122,12 @@ struct MD5Sum< ::robotis::counterRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "5e90a477f371ee690ac763e15f14f34b";
+    return "e8054fff057e825e73968032a7c26bc8";
   }
 
   static const char* value(const ::robotis::counterRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x5e90a477f371ee69ULL;
-  static const uint64_t static_value2 = 0x0ac763e15f14f34bULL;
+  static const uint64_t static_value1 = 0xe8054fff057e825eULL;
+  static const uint64_t static_value2 = 0x73968032a7c26bc8ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +146,7 @@ struct Definition< ::robotis::counterRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string x\n"
+    return "string mystring\n"
 "\n"
 ;
   }
@@ -166,7 +166,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.x);
+      stream.next(m.mystring);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -185,8 +185,8 @@ struct Printer< ::robotis::counterRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robotis::counterRequest_<ContainerAllocator>& v)
   {
-    s << indent << "x: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.x);
+    s << indent << "mystring: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.mystring);
   }
 };
 

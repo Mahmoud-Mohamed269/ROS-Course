@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "robotis: 0 messages, 1 services")
+message(STATUS "robotis: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irobotis:/home/mahmoud/catkin_ws/src/robotis/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -22,12 +22,23 @@ add_custom_target(_robotis_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robotis" "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" ""
 )
 
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
+add_custom_target(_robotis_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robotis" "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(robotis
+  "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robotis
+)
 
 ### Generating Services
 _generate_srv_cpp(robotis
@@ -51,6 +62,8 @@ add_dependencies(robotis_generate_messages robotis_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" NAME_WE)
 add_dependencies(robotis_generate_messages_cpp _robotis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
+add_dependencies(robotis_generate_messages_cpp _robotis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robotis_gencpp)
@@ -61,6 +74,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robotis_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(robotis
+  "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/robotis
+)
 
 ### Generating Services
 _generate_srv_eus(robotis
@@ -84,6 +103,8 @@ add_dependencies(robotis_generate_messages robotis_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" NAME_WE)
 add_dependencies(robotis_generate_messages_eus _robotis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
+add_dependencies(robotis_generate_messages_eus _robotis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robotis_geneus)
@@ -94,6 +115,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robotis_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(robotis
+  "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robotis
+)
 
 ### Generating Services
 _generate_srv_lisp(robotis
@@ -117,6 +144,8 @@ add_dependencies(robotis_generate_messages robotis_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" NAME_WE)
 add_dependencies(robotis_generate_messages_lisp _robotis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
+add_dependencies(robotis_generate_messages_lisp _robotis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robotis_genlisp)
@@ -127,6 +156,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robotis_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(robotis
+  "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/robotis
+)
 
 ### Generating Services
 _generate_srv_nodejs(robotis
@@ -150,6 +185,8 @@ add_dependencies(robotis_generate_messages robotis_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" NAME_WE)
 add_dependencies(robotis_generate_messages_nodejs _robotis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
+add_dependencies(robotis_generate_messages_nodejs _robotis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robotis_gennodejs)
@@ -160,6 +197,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robotis_generate_messages_nodejs)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(robotis
+  "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robotis
+)
 
 ### Generating Services
 _generate_srv_py(robotis
@@ -182,6 +225,8 @@ add_dependencies(robotis_generate_messages robotis_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/srv/counter.srv" NAME_WE)
+add_dependencies(robotis_generate_messages_py _robotis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg" NAME_WE)
 add_dependencies(robotis_generate_messages_py _robotis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

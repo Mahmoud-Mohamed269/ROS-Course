@@ -53,22 +53,38 @@ CMAKE_BINARY_DIR = /home/mahmoud/catkin_ws/build
 # Include the progress variables for this target.
 include robotis/CMakeFiles/robotis_generate_messages_py.dir/progress.make
 
+robotis/CMakeFiles/robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py
 robotis/CMakeFiles/robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py
+robotis/CMakeFiles/robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py
 robotis/CMakeFiles/robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py
 
 
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py: /home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG robotis/mahmoud"
+	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/mahmoud/catkin_ws/src/robotis/msg/mahmoud.msg -Irobotis:/home/mahmoud/catkin_ws/src/robotis/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg
+
 /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
 /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py: /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code from SRV robotis/counter"
-	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV robotis/counter"
+	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/mahmoud/catkin_ws/src/robotis/srv/counter.srv -Irobotis:/home/mahmoud/catkin_ws/src/robotis/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robotis -o /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv
+
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for robotis"
+	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg --initpy
 
 /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py
 /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python srv __init__.py for robotis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mahmoud/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for robotis"
 	cd /home/mahmoud/catkin_ws/build/robotis && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv --initpy
 
 robotis_generate_messages_py: robotis/CMakeFiles/robotis_generate_messages_py
+robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py
 robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py
+robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py
 robotis_generate_messages_py: /home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py
 robotis_generate_messages_py: robotis/CMakeFiles/robotis_generate_messages_py.dir/build.make
 

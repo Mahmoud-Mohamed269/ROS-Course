@@ -21,22 +21,22 @@ class counterRequest {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.x = null;
+      this.mystring = null;
     }
     else {
-      if (initObj.hasOwnProperty('x')) {
-        this.x = initObj.x
+      if (initObj.hasOwnProperty('mystring')) {
+        this.mystring = initObj.mystring
       }
       else {
-        this.x = '';
+        this.mystring = '';
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type counterRequest
-    // Serialize message field [x]
-    bufferOffset = _serializer.string(obj.x, buffer, bufferOffset);
+    // Serialize message field [mystring]
+    bufferOffset = _serializer.string(obj.mystring, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -44,14 +44,14 @@ class counterRequest {
     //deserializes a message object of type counterRequest
     let len;
     let data = new counterRequest(null);
-    // Deserialize message field [x]
-    data.x = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [mystring]
+    data.mystring = _deserializer.string(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.x.length;
+    length += object.mystring.length;
     return length + 4;
   }
 
@@ -62,13 +62,13 @@ class counterRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '5e90a477f371ee690ac763e15f14f34b';
+    return 'e8054fff057e825e73968032a7c26bc8';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string x
+    string mystring
     
     
     `;
@@ -80,11 +80,11 @@ class counterRequest {
       msg = {};
     }
     const resolved = new counterRequest(null);
-    if (msg.x !== undefined) {
-      resolved.x = msg.x;
+    if (msg.mystring !== undefined) {
+      resolved.mystring = msg.mystring;
     }
     else {
-      resolved.x = ''
+      resolved.mystring = ''
     }
 
     return resolved;
@@ -95,22 +95,22 @@ class counterResponse {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.y = null;
+      this.count = null;
     }
     else {
-      if (initObj.hasOwnProperty('y')) {
-        this.y = initObj.y
+      if (initObj.hasOwnProperty('count')) {
+        this.count = initObj.count
       }
       else {
-        this.y = 0;
+        this.count = 0;
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type counterResponse
-    // Serialize message field [y]
-    bufferOffset = _serializer.int32(obj.y, buffer, bufferOffset);
+    // Serialize message field [count]
+    bufferOffset = _serializer.int32(obj.count, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -118,8 +118,8 @@ class counterResponse {
     //deserializes a message object of type counterResponse
     let len;
     let data = new counterResponse(null);
-    // Deserialize message field [y]
-    data.y = _deserializer.int32(buffer, bufferOffset);
+    // Deserialize message field [count]
+    data.count = _deserializer.int32(buffer, bufferOffset);
     return data;
   }
 
@@ -134,14 +134,14 @@ class counterResponse {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '48a1903b27e436ce72db71499e9e0169';
+    return '602d642babe509c7c59f497c23e716a9';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     
-    int32 y
+    int32 count
     
     
     `;
@@ -153,11 +153,11 @@ class counterResponse {
       msg = {};
     }
     const resolved = new counterResponse(null);
-    if (msg.y !== undefined) {
-      resolved.y = msg.y;
+    if (msg.count !== undefined) {
+      resolved.count = msg.count;
     }
     else {
-      resolved.y = 0
+      resolved.count = 0
     }
 
     return resolved;
@@ -167,6 +167,6 @@ class counterResponse {
 module.exports = {
   Request: counterRequest,
   Response: counterResponse,
-  md5sum() { return '7a568b073f7ad956a756ca8771eb90bd'; },
+  md5sum() { return 'b4834320f090e9235da913886638fb4e'; },
   datatype() { return 'robotis/counter'; }
 };

@@ -1,6 +1,6 @@
 (cl:in-package robotis-srv)
-(cl:export '(X-VAL
-          X
-          Y-VAL
-          Y
+(cl:export '(MYSTRING-VAL
+          MYSTRING
+          COUNT-VAL
+          COUNT
 ))

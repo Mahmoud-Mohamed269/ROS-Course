@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robotis_generate_messages_py"
+  "/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/_mahmoud.py"
   "/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/_counter.py"
+  "/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/msg/__init__.py"
   "/home/mahmoud/catkin_ws/devel/lib/python2.7/dist-packages/robotis/srv/__init__.py"
 )
 
