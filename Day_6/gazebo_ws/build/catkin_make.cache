@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/mahmoud/gazebo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mahmoud/gazebo_ws/install -G Unix Makefiles
