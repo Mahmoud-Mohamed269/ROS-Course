@@ -1,0 +1,23 @@
+<?xml version="1.0"?/
+<robot name="first_Robot">
+  <!--links-->
+  <link name="Base">
+   <visual>
+    <geometry>
+     <cylinder length="0.5" radius="0.25"/>
+    </geomtry>
+   </visual>
+  </link>
+  <link name="Arm">
+   <visual>
+    <geometry>
+     <cylinder length="0.32" radius="0.25"/>
+    </geomtry>
+   </visual>
+  </link>
+  <!--joints-->
+  <joint name="Base_Joint" type="continuous">
+    <parent link="Base"/>
+    <child link="Arm"/>
+  </joint>
+</robot>
